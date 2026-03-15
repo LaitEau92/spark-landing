@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { PartyPopper } from 'lucide-react'
 import sparkLogo from '../assets/spark-logo.svg'
+import GradientText from './reactbits/GradientText/GradientText'
 import styles from './Waitlist.module.css'
 
 export default function Waitlist() {
@@ -39,7 +40,14 @@ export default function Waitlist() {
               />
               <button type="submit" className={styles.btn}>
                 <img src={sparkLogo} alt="" className={styles.btnIcon} />
-                <span className={styles.btnLabel}>Me prévenir</span>
+                <GradientText
+                  colors={["#FFECAC", "#EB4A00", "#920000", "#EB4A00", "#FFECAC"]}
+                  animationSpeed={5}
+                  showBorder={false}
+                  className={styles.btnGradient}
+                >
+                  Me prévenir
+                </GradientText>
               </button>
             </form>
             <p className={styles.privacy}>Pas de spam. Désabonnement en un clic. RGPD.</p>

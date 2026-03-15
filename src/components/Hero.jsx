@@ -42,7 +42,14 @@ export default function Hero() {
               onClick={e => handleScroll(e, '#waitlist')}
             >
               <img src={sparkLogo} alt="" className={styles.btnIcon} />
-              <span className={styles.btnLabel}>Rejoindre la liste d'attente</span>
+              <GradientText
+                colors={["#FFECAC", "#EB4A00", "#920000", "#EB4A00", "#FFECAC"]}
+                animationSpeed={5}
+                showBorder={false}
+                className={styles.btnGradient}
+              >
+                Rejoindre la liste d'attente
+              </GradientText>
             </a>
             <a
               href="#how"

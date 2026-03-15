@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react'
 import ElectricBorder from './reactbits/ElectricBorder/ElectricBorder'
+import GradientText from './reactbits/GradientText/GradientText'
 import styles from './Pricing.module.css'
 
 const plans = [
@@ -86,7 +87,16 @@ export default function Pricing() {
                   onClick={handleScroll}
                   className={`${styles.cta} ${p.popular ? styles.ctaPrimary : styles.ctaOutline}`}
                 >
-                  {p.cta}
+                  {p.popular ? (
+                    <GradientText
+                      colors={["#FFECAC", "#EB4A00", "#920000", "#EB4A00", "#FFECAC"]}
+                      animationSpeed={5}
+                      showBorder={false}
+                      className={styles.btnGradient}
+                    >
+                      {p.cta}
+                    </GradientText>
+                  ) : p.cta}
                 </a>
                 {p.note && <p className={styles.note}>{p.note}</p>}
               </div>

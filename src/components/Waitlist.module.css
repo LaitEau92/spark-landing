@@ -102,11 +102,14 @@
   box-shadow: 0 0 36px rgba(235,74,0,0.75), 0 0 80px rgba(235,74,0,0.35);
 }
 
-.btnLabel {
-  background: linear-gradient(150deg, #FFECAC 0%, #EB4A00 55%, #920000 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.btnGradient {
+  display: inline-flex !important;
+  max-width: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  cursor: inherit !important;
+  font-weight: 700 !important;
+  font-size: inherit !important;
 }
 
 .btnIcon {

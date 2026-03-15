@@ -1,6 +1,6 @@
 .section {
   padding: 7rem 0;
-  background: var(--bg-card-2);
+  background: transparent;
 }
 
 .container {

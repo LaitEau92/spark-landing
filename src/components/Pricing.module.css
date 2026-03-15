@@ -1,6 +1,6 @@
 .section {
   padding: 7rem 0;
-  background: var(--bg-card-2);
+  background: transparent;
 }
 
 .container {
@@ -57,10 +57,22 @@
 }
 .plan:hover { transform: translateY(-4px); }
 
+.popularWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.electricWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .plan.popular {
-  border-color: rgba(235,74,0,0.45);
+  border-color: transparent;
   background: linear-gradient(160deg, rgba(235,74,0,0.09), rgba(146,0,0,0.06));
-  box-shadow: 0 0 50px rgba(235,74,0,0.1);
+  flex: 1;
 }
 
 .badge {
@@ -75,6 +87,7 @@
   padding: 0.25rem 0.9rem;
   border-radius: 100px;
   white-space: nowrap;
+  z-index: 10;
 }
 
 .header { display: flex; flex-direction: column; gap: 0.4rem; }

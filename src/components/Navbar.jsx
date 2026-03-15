@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import sparkLogo from '../assets/spark-logo.svg'
 import styles from './Navbar.module.css'
 
 const links = [
@@ -28,8 +27,7 @@ export default function Navbar() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
         <a href="#" className={styles.logo} onClick={e => handleLink(e, '#')}>
-          <img src={sparkLogo} alt="Spark" className={styles.flame} />
-          <span className={styles.wordmark}>Spark</span>
+          <img src="/spark-original-logo.png" alt="Spark" className={styles.logoImg} />
         </a>
 
         <ul className={styles.links}>

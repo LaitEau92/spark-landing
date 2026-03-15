@@ -10,8 +10,6 @@ export default function Hero() {
 
   return (
     <section className={styles.hero}>
-      <div className={styles.glow} aria-hidden="true" />
-      <div className={styles.glowBottom} aria-hidden="true" />
 
       <div className={styles.container}>
         <div className={styles.content}>

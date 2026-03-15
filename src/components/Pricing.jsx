@@ -1,3 +1,4 @@
+import ElectricBorder from './reactbits/ElectricBorder/ElectricBorder'
 import styles from './Pricing.module.css'
 
 const plans = [
@@ -62,38 +63,51 @@ export default function Pricing() {
           <em className={styles.gradientText}>Honnête.</em>
         </h2>
         <div className={styles.grid}>
-          {plans.map(p => (
-            <div
-              key={p.id}
-              className={`${styles.plan} ${p.popular ? styles.popular : ''}`}
-            >
-              {p.popular && (
-                <div className={styles.badge}>Le plus populaire</div>
-              )}
-              <div className={styles.header}>
-                <span className={`${styles.planName} ${p.nameGradient ? styles.gradientText : ''}`}>
-                  {p.name}
-                </span>
-                <div className={styles.priceRow}>
-                  <span className={styles.amount}>{p.price}</span>
-                  <span className={styles.period}>{p.period}</span>
+          {plans.map(p => {
+            const cardContent = (
+              <div className={`${styles.plan} ${p.popular ? styles.popular : ''}`}>
+                <div className={styles.header}>
+                  <span className={`${styles.planName} ${p.nameGradient ? styles.gradientText : ''}`}>
+                    {p.name}
+                  </span>
+                  <div className={styles.priceRow}>
+                    <span className={styles.amount}>{p.price}</span>
+                    <span className={styles.period}>{p.period}</span>
+                  </div>
                 </div>
+                <ul className={styles.features}>
+                  {p.features.map(f => (
+                    <li key={f}><span className={styles.check}>✓</span>{f}</li>
+                  ))}
+                </ul>
+                <a
+                  href="#waitlist"
+                  onClick={handleScroll}
+                  className={`${styles.cta} ${p.popular ? styles.ctaPrimary : styles.ctaOutline}`}
+                >
+                  {p.cta}
+                </a>
+                {p.note && <p className={styles.note}>{p.note}</p>}
               </div>
-              <ul className={styles.features}>
-                {p.features.map(f => (
-                  <li key={f}><span className={styles.check}>✓</span>{f}</li>
-                ))}
-              </ul>
-              <a
-                href="#waitlist"
-                onClick={handleScroll}
-                className={`${styles.cta} ${p.popular ? styles.ctaPrimary : styles.ctaOutline}`}
-              >
-                {p.cta}
-              </a>
-              {p.note && <p className={styles.note}>{p.note}</p>}
-            </div>
-          ))}
+            )
+
+            return p.popular ? (
+              <div key={p.id} className={styles.popularWrapper}>
+                <div className={styles.badge}>Le plus populaire</div>
+                <ElectricBorder
+                  color="#eb4a00"
+                  speed={0.7}
+                  chaos={0.09}
+                  borderRadius={20}
+                  className={styles.electricWrapper}
+                >
+                  {cardContent}
+                </ElectricBorder>
+              </div>
+            ) : (
+              <div key={p.id}>{cardContent}</div>
+            )
+          })}
         </div>
       </div>
     </section>

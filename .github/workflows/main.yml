@@ -21,4 +21,6 @@ jobs:
             git pull origin main
             npm install
             npm run build
-            pm2 restart spark
+            pm2 delete spark || true
+            pm2 start "npx vite preview --host --port 3000" --name spark
+            pm2 save

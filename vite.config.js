@@ -6,4 +6,10 @@ export default defineConfig({
   server: {
     allowedHosts: ['spark.powerll.fr'],
   },
+  preview: {
+    allowedHosts: ['spark.powerll.fr'],
+    headers: {
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+    },
+  },
 })

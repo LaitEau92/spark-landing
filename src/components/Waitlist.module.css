@@ -87,26 +87,31 @@
   gap: 0.45rem;
   padding: 0.9rem 1.5rem;
   border-radius: 100px;
-  background: var(--gradient);
-  color: var(--bg);
+  background: #FFF5E4;
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 700;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 24px rgba(235,74,0,0.38);
+  box-shadow: 0 0 24px rgba(235,74,0,0.55), 0 0 60px rgba(235,74,0,0.22);
   white-space: nowrap;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(235,74,0,0.55);
+  box-shadow: 0 0 36px rgba(235,74,0,0.75), 0 0 80px rgba(235,74,0,0.35);
+}
+
+.btnLabel {
+  background: linear-gradient(150deg, #FFECAC 0%, #EB4A00 55%, #920000 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btnIcon {
   width: 16px;
   height: 16px;
-  filter: brightness(0);
 }
 
 .privacy {

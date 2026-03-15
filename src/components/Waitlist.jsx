@@ -39,7 +39,7 @@ export default function Waitlist() {
               />
               <button type="submit" className={styles.btn}>
                 <img src={sparkLogo} alt="" className={styles.btnIcon} />
-                Me prévenir
+                <span className={styles.btnLabel}>Me prévenir</span>
               </button>
             </form>
             <p className={styles.privacy}>Pas de spam. Désabonnement en un clic. RGPD.</p>

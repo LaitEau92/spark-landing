@@ -105,24 +105,28 @@
   gap: 0.5rem;
   padding: 0.9rem 1.75rem;
   border-radius: 100px;
-  background: var(--gradient);
-  color: var(--bg);
+  background: #FFF5E4;
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
-  box-shadow: 0 4px 28px rgba(235,74,0,0.38);
+  box-shadow: 0 0 24px rgba(235,74,0,0.55), 0 0 60px rgba(235,74,0,0.22);
   transition: transform 0.2s var(--ease), box-shadow 0.2s;
 }
 .btnPrimary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 36px rgba(235,74,0,0.55);
+  box-shadow: 0 0 36px rgba(235,74,0,0.75), 0 0 80px rgba(235,74,0,0.35);
+}
+.btnPrimary .btnLabel {
+  background: linear-gradient(150deg, #FFECAC 0%, #EB4A00 55%, #920000 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btnIcon {
   width: 18px;
   height: 18px;
   object-fit: contain;
-  filter: brightness(0);
 }
 
 .btnGhost {

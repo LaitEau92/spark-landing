@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { PartyPopper } from 'lucide-react'
 import sparkLogo from '../assets/spark-logo.svg'
 import styles from './Waitlist.module.css'
 
@@ -45,7 +46,8 @@ export default function Waitlist() {
           </>
         ) : (
           <div className={styles.success}>
-            🎉 Tu es sur la liste ! On te contacte dès que Spark est prêt.
+            <PartyPopper size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '0.4rem' }} />
+            Tu es sur la liste ! On te contacte dès que Spark est prêt.
           </div>
         )}
       </div>

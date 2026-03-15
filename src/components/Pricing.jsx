@@ -1,3 +1,4 @@
+import { Check } from 'lucide-react'
 import ElectricBorder from './reactbits/ElectricBorder/ElectricBorder'
 import styles from './Pricing.module.css'
 
@@ -77,7 +78,7 @@ export default function Pricing() {
                 </div>
                 <ul className={styles.features}>
                   {p.features.map(f => (
-                    <li key={f}><span className={styles.check}>✓</span>{f}</li>
+                    <li key={f}><span className={styles.check}><Check size={14} strokeWidth={2.5} /></span>{f}</li>
                   ))}
                 </ul>
                 <a

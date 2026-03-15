@@ -1,3 +1,4 @@
+import { Heart } from 'lucide-react'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -20,7 +21,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={styles.bottom}>
-          <span>© 2026 Spark. Fait avec ❤️ à Lille.</span>
+          <span>© 2026 Spark. Fait avec <Heart size={12} style={{ display: 'inline', verticalAlign: 'middle', color: '#EB4A00' }} /> à Lille.</span>
         </div>
       </div>
     </footer>

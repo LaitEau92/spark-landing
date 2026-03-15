@@ -1,5 +1,6 @@
 import sparkLogo from '../assets/spark-logo.svg'
 import iphone from '/iPhone 15 Pro.png'
+import GradientText from './reactbits/GradientText/GradientText'
 import styles from './Hero.module.css'
 
 export default function Hero() {
@@ -19,8 +20,14 @@ export default function Hero() {
           </div>
 
           <h1 className={styles.headline}>
-            Vis ta vie.<br />
-            <em className={styles.gradientText}>Pas celle des autres.</em>
+            <GradientText
+              colors={["#FFECAC", "#EB4A00", "#920000", "#EB4A00", "#FFECAC"]}
+              animationSpeed={6}
+              showBorder={false}
+              className={styles.headlineGradient}
+            >
+              Vis ta vie.<br />Pas celle des autres.
+            </GradientText>
           </h1>
 
           <p className={styles.sub}>

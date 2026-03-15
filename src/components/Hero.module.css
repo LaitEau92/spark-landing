@@ -358,6 +358,7 @@
   .phoneImage {
     width: 88vw;
     max-width: 440px;
+    filter: none;
   }
 }
 

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { Check } from 'lucide-react'
 import ElectricBorder from './reactbits/ElectricBorder/ElectricBorder'
 import GradientText from './reactbits/GradientText/GradientText'
@@ -51,6 +52,15 @@ const plans = [
 ]
 
 export default function Pricing() {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 900px)')
+    setIsMobile(mq.matches)
+    const handler = (e) => setIsMobile(e.matches)
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [])
+
   const handleScroll = (e) => {
     e.preventDefault()
     document.querySelector('#waitlist')?.scrollIntoView({ behavior: 'smooth' })
@@ -105,15 +115,17 @@ export default function Pricing() {
             return p.popular ? (
               <div key={p.id} className={styles.popularWrapper}>
                 <div className={styles.badge}>Le plus populaire</div>
-                <ElectricBorder
-                  color="#eb4a00"
-                  speed={0.7}
-                  chaos={0.09}
-                  borderRadius={20}
-                  className={styles.electricWrapper}
-                >
-                  {cardContent}
-                </ElectricBorder>
+                {!isMobile ? (
+                  <ElectricBorder
+                    color="#eb4a00"
+                    speed={0.7}
+                    chaos={0.09}
+                    borderRadius={20}
+                    className={styles.electricWrapper}
+                  >
+                    {cardContent}
+                  </ElectricBorder>
+                ) : cardContent}
               </div>
             ) : (
               <div key={p.id}>{cardContent}</div>

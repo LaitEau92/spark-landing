@@ -1,0 +1,99 @@
+.section {
+  padding: 7rem 0;
+  background: var(--bg-card-2);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 4rem;
+}
+
+.gradientText {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.step {
+  flex: 1;
+  min-width: 220px;
+  max-width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stepNum {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: var(--bg);
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 24px rgba(235,74,0,0.38);
+  flex-shrink: 0;
+}
+
+.step h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+  font-style: normal;
+}
+
+.step p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: var(--orange);
+  opacity: 0.4;
+  padding-top: 1rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 680px) {
+  .steps { flex-direction: column; align-items: center; }
+  .arrow { transform: rotate(90deg); padding: 0; }
+}

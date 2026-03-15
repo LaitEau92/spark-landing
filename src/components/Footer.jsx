@@ -13,7 +13,7 @@ export default function Footer() {
         <div className={styles.links}>
           <a href="#">Confidentialité</a>
           <a href="#">Conditions d'utilisation</a>
-          <a href="mailto:contact@sparkyourlife.app">Contact</a>
+          <a href="mailto:contact@sparkapp.fr">Contact</a>
         </div>
         <p className={styles.copy}>© 2026 Spark. Fait avec ❤️ à Lille.</p>
       </div>

@@ -21,7 +21,7 @@ export default function App() {
           mouseInteractive={false}
         />
       </div>
-      <div style={{ position: 'relative', zIndex: 1 }}>
+      <div style={{ position: 'relative', zIndex: 1, overflowX: 'hidden', maxWidth: '100vw' }}>
         <Navbar />
         <main>
           <Hero />

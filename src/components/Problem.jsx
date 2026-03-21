@@ -3,20 +3,22 @@ import styles from './Problem.module.css'
 
 const cards = [
   {
+    icon: Timer,
+    title: 'Le piège de l\'algorithme',
+    text: 'Tu ouvres Insta par automatisme ou avec une intention et tu finis par te perdre',
+    highlight: true,
+  },
+  {
     icon: Wind,
     title: '«\u202fTrop facile à contourner\u202f»',
     text: 'Les apps de blocage classiques ? Un clic et c\'est désactivé. En quelques secondes tu es de retour sur le fil infini.',
-  },
-  {
-    icon: Timer,
-    title: '2h16 par jour',
-    text: 'C\'est le temps moyen passé sur Instagram par les 15-25 ans. Sur un an, ça représente presque un mois entier de vie.',
     highlight: true,
   },
   {
     icon: Lock,
-    title: '«\u202fTrop punitif\u202f»',
-    text: 'Les apps qui bloquent tout finissent à la poubelle après une semaine. Tu as besoin d\'Instagram — pas de le subir.',
+    title: 'Les apps de blocage',
+    text: 'Trop facile à contourner, elles finissent toutes désinstallées après une semaine.',
+    highlight: true,
   },
 ]
 

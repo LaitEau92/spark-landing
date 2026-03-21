@@ -1,18 +1,19 @@
 import styles from './HowItWorks.module.css'
+import IPhoneMockup from './IPhoneMockup'
 
 const steps = [
   {
-    n: '1',
-    title: 'Choisis ton intention',
-    text: 'Avant d\'ouvrir Instagram, tu définis pourquoi : voir les stories d\'un ami, poster une photo, consulter un profil.',
+    img: '/page_principale_app.png',
+    title: 'Prends les commandes',
+    text: 'Au lieu d\'ouvrir insta à l\'aveugle, Spark t\'intercept, et tu choisis ton but précis (Un DM, un post, une recherche,...) pour directement accéder à ta destination.',
   },
   {
-    n: '2',
-    title: 'Spark filtre le reste',
-    text: 'Le fil infini, les Reels en boucle, les suggestions algorithmiques. Tout ce qui n\'est pas ton intention est bloqué — vraiment.',
+    img: '/notif_intention.png',
+    title: 'Le chrono de conscience',
+    text: 'Fixe ta limite avant d\'entrer. Pendant que tu es sur l\'app, des rappels discrets te remettent sur ta direction. Tu restes maître de ton temps, pas l\'inverse.',
   },
   {
-    n: '3',
+    img: '/timers.png',
     title: 'Tu reprends le contrôle',
     text: 'Ton tableau de bord te montre chaque minute économisée. Semaine après semaine, tu vois la vie que tu as récupérée.',
   },
@@ -31,13 +32,13 @@ export default function HowItWorks() {
         <div className={styles.steps}>
           {steps.map((s, i) => (
             <>
-              <div key={s.n} className={styles.step}>
-                <div className={styles.stepNum}>{s.n}</div>
+              <div key={s.title} className={styles.step}>
+                <IPhoneMockup src={s.img} alt={s.title} />
                 <h3>{s.title}</h3>
                 <p>{s.text}</p>
               </div>
               {i < steps.length - 1 && (
-                <div key={`arrow-${i}`} className={styles.arrow} aria-hidden="true">→</div>
+                <img key={`arrow-${i}`} src="/arrow.svg" alt="" className={styles.arrow} aria-hidden="true" />
               )}
             </>
           ))}

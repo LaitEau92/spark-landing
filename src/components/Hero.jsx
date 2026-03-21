@@ -20,14 +20,9 @@ export default function Hero() {
           </div>
 
           <h1 className={styles.headline}>
-            <GradientText
-              colors={["#FFECAC", "#EB4A00", "#920000", "#EB4A00", "#FFECAC"]}
-              animationSpeed={6}
-              showBorder={false}
-              className={styles.headlineGradient}
-            >
-              Vis ta vie.<br />Pas celle des autres.
-            </GradientText>
+            <span className={styles.headlineGradient}>
+              Utilise instagram<br />pour ce qui compte,<br />ne le subis pas.
+            </span>
           </h1>
 
           <p className={styles.sub}>
@@ -73,7 +68,7 @@ export default function Hero() {
             <div className={styles.divider} />
             <div className={styles.stat}>
               <span className={`${styles.statNum} ${styles.gradientText}`}>100%</span>
-              <span className={styles.statLabel}>privé — RGPD<br />strictement respecté</span>
+              <span className={styles.statLabel}>privé — aucune<br />connexion requise</span>
             </div>
           </div>
         </div>

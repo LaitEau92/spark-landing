@@ -46,29 +46,16 @@
 
 .step {
   flex: 1;
-  min-width: 220px;
-  max-width: 290px;
+  min-width: 240px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.stepNum {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: var(--gradient);
-  color: var(--bg);
-  font-size: 1.4rem;
-  font-weight: 800;
-  font-style: italic;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.25rem;
-  box-shadow: 0 4px 24px rgba(235,74,0,0.38);
-  flex-shrink: 0;
+.step > :first-child {
+  margin-bottom: 1.75rem;
 }
 
 .step h3 {
@@ -86,14 +73,15 @@
 }
 
 .arrow {
-  font-size: 1.5rem;
-  color: var(--orange);
-  opacity: 0.4;
-  padding-top: 1rem;
+  width: 48px;
+  height: auto;
+  margin-top: 8rem;
   flex-shrink: 0;
+  filter: brightness(0) saturate(100%) invert(45%) sepia(90%) saturate(600%) hue-rotate(5deg) brightness(105%);
+  opacity: 0.75;
 }
 
 @media (max-width: 680px) {
   .steps { flex-direction: column; align-items: center; }
-  .arrow { transform: rotate(90deg); padding: 0; }
+  .arrow { transform: rotate(90deg); margin-top: 0; }
 }

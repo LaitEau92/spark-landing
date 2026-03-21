@@ -26,7 +26,7 @@ export default function Hero() {
           </h1>
 
           <p className={styles.sub}>
-            Spark te permet d'utiliser Instagram pour ce qui compte vraiment&nbsp;—
+            Spark te permet d'utiliser Instagram pour ce qui compte vraiment
             sans finir à scroller pendant des heures sans t'en rendre compte.
           </p>
 
@@ -65,11 +65,8 @@ export default function Hero() {
               <span className={`${styles.statNum} ${styles.gradientText}`}>2h+</span>
               <span className={styles.statLabel}>économisées<br />par jour</span>
             </div>
-            <div className={styles.divider} />
-            <div className={styles.stat}>
-              <span className={`${styles.statNum} ${styles.gradientText}`}>100%</span>
-              <span className={styles.statLabel}>privé — aucune<br />connexion requise</span>
-            </div>
+
+            
           </div>
         </div>
 

@@ -8,12 +8,12 @@ const steps = [
     text: 'Au lieu d\'ouvrir insta à l\'aveugle, Spark t\'intercept, et tu choisis ton but précis (Un DM, un post, une recherche,...) pour directement accéder à ta destination.',
   },
   {
-    img: '/notif_intention.png',
+    img: '/timers.png',
     title: 'Le chrono de conscience',
     text: 'Fixe ta limite avant d\'entrer. Pendant que tu es sur l\'app, des rappels discrets te remettent sur ta direction. Tu restes maître de ton temps, pas l\'inverse.',
   },
   {
-    img: '/timers.png',
+    img: '/session_fini.png',
     title: 'Tu reprends le contrôle',
     text: 'Ton tableau de bord te montre chaque minute économisée. Semaine après semaine, tu vois la vie que tu as récupérée.',
   },

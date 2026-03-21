@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 
 const links = [
-  { label: 'Fonctionnalités', href: '#features' },
   { label: 'Comment ça marche', href: '#how' },
-  { label: 'Tarifs', href: '#pricing' },
 ]
 
 export default function Navbar() {
